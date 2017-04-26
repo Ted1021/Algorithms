@@ -8,8 +8,37 @@
 
 #include <iostream>
 
+using namespace std;
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+   
+    int sum=0;
+    int n=1;
+    int target;
+    
+    cin >> target;
+    
+    
+    while(true){
+       
+        sum = sum + n;
+        if(sum >= target){
+            
+            int interval = sum-target;
+            
+            if(n%2==0){
+                cout << n-interval << "/" << 1+interval << endl;
+                
+            }
+            else{
+                cout << 1+interval << "/" << n-interval << endl;
+            }
+            
+            break;
+        }
+        
+        n++;
+    }
+    
     return 0;
 }
