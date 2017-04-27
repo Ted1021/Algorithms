@@ -10,7 +10,7 @@ using namespace std;
 
 #include <iostream>
 
-void movements(int x, int y);
+int movements(int x, int y);
 
 int main(int argc, const char * argv[]) {
     
@@ -20,31 +20,16 @@ int main(int argc, const char * argv[]) {
     cin >> T;
     for(int i=0; i<T; i++){
         cin >> x >> y;
-        movements(x,y);
+        cout << movements(x,y);
     }
     
     return 0;
 }
 
-void movements(int x, int y){
+int movements(int x, int y){
     
-    int move=1;
-    int count=1;
     
-    while(true){
-        
-        y = y-move;
-        cout << "current = " << y << endl;
-        
-        if(y < x){
-            cout << count << endl;
-            break;
-        }
-        else{
-            count++;
-            move++;
-            cout << "move = " << move << endl;
-        }
-        
-    }
+    
+    return 0;
+
 }
